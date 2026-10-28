@@ -1,0 +1,31 @@
+name: Check IPA download links
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check configured URLs
+        run: python3 scripts/check_links.py > link-report.txt && cat link-report.txt
+      - name: Store result for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: link-report
+          path: link-report.txt
+          retention-days: 14
+      - name: Notify when review required (avoid duplicate open issues)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          if grep -Eq '^(FAILED|REVIEW) ' link-report.txt; then
+            if ! gh issue list --state open --search '"Zhengzhin: kiểm tra link tải" in:title' --json title --jq '.[].title' | grep -q 'Zhengzhin: kiểm tra link tải'; then
+              gh issue create --title 'Zhengzhin: kiểm tra link tải' --body-file link-report.txt
+            fi
+          fi
