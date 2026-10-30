@@ -11,3 +11,11 @@ CACH SUA NOI DUNG (mo index.html bang trinh soan thao, tim "zz-config"):
 
 Them ung dung: sua danh sach window.IPA_APPS (co ghi chu mau ngay trong file).
 So lieu thong ke tinh tu danh sach ung dung that. Khong co so gia.
+
+Da them 6 file TXT trong tools/: Claude, Ar Gemini, DeepSeek VV, ChatGPT, Gemini, Grok (cre: An danh).
+
+
+MỤC HÌNH NỀN (TENDIES): 4 file gốc nằm trong wallpapers/, 4 ảnh xem trước .webp. Black NotGyro ghép hai ảnh đã gửi thành một preview. Để tải trực tiếp qua GitHub Pages, upload toàn bộ thư mục wallpapers cùng index.html.
+
+CAP NHAT 30/10: 4 file Tendies duoc thay link tai MediaFire; ZIP chi giu anh xem truoc.
+6 muc AI TXT co icon tuong ung: ChatGPT, DeepSeek, Gemini (2 muc), Claude; Grok co icon rieng.
