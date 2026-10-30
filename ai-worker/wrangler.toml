@@ -1,0 +1,7 @@
+name = "zhengzhin-ai"
+main = "worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+ALLOWED_ORIGINS = "https://zhengzhin07.github.io"
+# MODEL = "claude-haiku-5-5"

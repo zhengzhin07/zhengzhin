@@ -1,0 +1,33 @@
+TRỢ LÝ AI HỖ TRỢ KHÁCH HÀNG - HƯỚNG DẪN
+
+1) DÙNG NGAY (không cần server)
+   Tải index.html mới lên GitHub Pages là xong. Nút "Hỏi AI" xuất hiện góc phải dưới.
+   Khi chưa có endpoint, trợ lý chỉ trả lời nhanh bằng dữ liệu trong web (tìm ứng dụng, cài IPA, chứng chỉ, lỗi thường gặp).
+   MUỐN HỎI GÌ CŨNG TRẢ LỜI ĐƯỢC (kiến thức, viết lách, lập trình...) thì BẮT BUỘC làm bước 2 bên dưới.
+
+2) BẬT AI THẬT (Claude) - làm 1 lần
+   GitHub Pages là web tĩnh nên KHÔNG được để API key trong index.html (ai xem mã nguồn cũng lấy được).
+   Dùng Cloudflare Worker (miễn phí) làm cầu nối:
+   a. Lấy API key tại console.anthropic.com
+   b. Cài Node.js, mở terminal trong thư mục ai-worker, chạy:
+        npm i -g wrangler
+        wrangler login
+        wrangler secret put ANTHROPIC_API_KEY     (dán key khi được hỏi)
+        wrangler deploy
+   c. Sửa wrangler.toml: ALLOWED_ORIGINS = địa chỉ web của bạn (vd https://zhengzhin07.github.io)
+   d. Chép URL Worker (dạng https://zhengzhin-ai.xxx.workers.dev) vào index.html,
+      tìm "zz-config", mục ai: { endpoint: '...' }
+   e. Tải index.html lên lại.
+
+   Nếu Worker lỗi hoặc hết hạn mức, trợ lý tự quay về chế độ trả lời nhanh nên khách không bị gián đoạn.
+
+3) TUỲ CHỈNH (trong "zz-config" ở index.html)
+   enabled: false     -> tắt hoàn toàn
+   name, telegram     -> tên hiển thị, link Telegram
+   welcome, suggestions -> lời chào, câu hỏi gợi ý
+   Muốn đổi tính cách/quy tắc của AI: sửa SYSTEM trong ai-worker/worker.js rồi wrangler deploy.
+
+4) LƯU Ý
+   - Chi phí: mặc định dùng model nhỏ (claude-haiku-5-5), mỗi câu trả lời tối đa 1200 token. Đổi bằng biến MODEL.
+   - Worker giới hạn 10 câu/phút mỗi IP (tạm thời). Muốn chặt hơn, thêm Rate Limiting Rule trong Cloudflare.
+   - Lịch sử chat chỉ lưu trên máy khách (nút ↺ để xóa). AI nhận 10 tin gần nhất + danh sách ứng dụng của web.
