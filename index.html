@@ -614,7 +614,8 @@ window.IPA_APPS = [
   "url": "https://www.mediafire.com/file/f28j6ci5fgso7ig/Lin_Chuxue.tendies/file",
   "filename": "Lin_Chuxue.tendies",
   "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "credit": "Denrindz"
 },
 {
   "id": "wallpaper-soy-milk-2",
@@ -627,7 +628,8 @@ window.IPA_APPS = [
   "url": "https://www.mediafire.com/file/tkgryxyi015vxdi/soy_milk_2.tendies/file",
   "filename": "soy_milk_2.tendies",
   "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "credit": "Denrindz"
 },
 {
   "id": "wallpaper-black-notgyro",
@@ -640,7 +642,8 @@ window.IPA_APPS = [
   "url": "https://www.mediafire.com/file/6xdwb157lwb7gag/Black_NotGyro.tendies/file",
   "filename": "Black_NotGyro.tendies",
   "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "credit": "Denrindz"
 },
 {
   "id": "wallpaper-blue-sky-couple-with-roses",
@@ -653,7 +656,8 @@ window.IPA_APPS = [
   "url": "https://www.mediafire.com/file/26xxl2y75qoq4lj/Blue-Sky-Couple-with-Roses.tendies/file",
   "filename": "Blue-Sky-Couple-with-Roses.tendies",
   "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30"
+  "date": "2026-10-30",
+  "credit": "Denrindz"
 }
 ];
 </script><script>'use strict';
@@ -683,6 +687,7 @@ card.classList.add('wallpaper-card');
 card.innerHTML=`<div class="wallpaper-head"><span>✦ HÌNH NỀN / TENDIES</span><span>iOS</span></div>
 <div class="wallpaper-preview"><img src="${escapeText(image)}" alt="Ảnh xem trước bộ hình nền ${escapeText(app.name)}" loading="lazy" decoding="async" width="800" height="850"></div>
 <div class="wallpaper-content"><h3>${escapeText(app.name)}</h3><p>${escapeText(app.description)}</p><div class="wallpaper-file">${escapeText(app.filename)}</div>
+${app.credit?`<div class="zz-credit"><span>Cre được lấy từ:</span><strong>${escapeText(app.credit)}</strong></div>`:""}
 <div class="fox-actions"><a class="fox-download" href="${escapeText(app.url)}" download="${escapeText(app.filename)}" aria-label="Tải hình nền ${escapeText(app.name)}">↓ &nbsp; TẢI HÌNH NỀN <span>›</span></a><button class="app-open fox-detail">Chi tiết</button><button class="app-save fox-save" aria-label="${saved.has(app.id)?'Bỏ lưu':'Lưu'} ${escapeText(app.name)}" aria-pressed="${saved.has(app.id)}">${icon('heart')}</button></div></div>`;
 }else{
 const isFox=app.id==='3105-v2-mediafire';
@@ -694,10 +699,10 @@ card.innerHTML=`<div class="fox-top"><span class="fox-label">✦ ${app.group==='
 <div class="fox-hero"><div class="fox-icon-frame"><img class="app-icon" src="${escapeText(image)}" alt="${escapeText(app.name)}" width="110" height="110" loading="lazy"><span class="fox-icon-version">${escapeText(version)}</span></div>
 <div class="fox-info"><div class="fox-name">${escapeText(app.name)} <span>${escapeText(version)}</span></div><div class="fox-filename">${escapeText(fileName)}</div><div class="fox-meta"><span>◈ ${app.group==='tool'?'TOOL':'IPA'}</span><span>▦ ${escapeText(app.date||'2026-10-30')}</span><span>${app.group==='tool'?'Tệp tin':'iOS'}</span></div></div></div>
 <div class="fox-description"><span class="zz-description-label">CÔNG DỤNG</span><span>${escapeText(desc)}</span></div>
-${app.credit?`<div class="zz-credit"><span>Cre được lấy từ</span><strong>${escapeText(app.credit)}</strong></div>`:''}
+${app.credit?`<div class="zz-credit"><span>Cre được lấy từ:</span><strong>${escapeText(app.credit)}</strong></div>`:''}
 <div class="fox-footer"><div class="fox-tags"><span>★ ${app.group==='tool'?'TOOL':'IPA'}</span><span>◈ ${escapeText(version)}</span><span>${escapeText(shortType)}</span>${isFox?'<span>✓ Unsigned</span>':''}</div><div class="fox-actions"><a class="fox-download" href="${escapeText(app.url)}" target="_blank" rel="noopener noreferrer" aria-label="Tải ${escapeText(app.name)}">↓ &nbsp; ${app.group==='tool'?'TẢI TOOL':'TẢI IPA'} <span>›</span></a><button class="app-open fox-detail">Chi tiết</button><button class="app-save fox-save" aria-label="${saved.has(app.id)?'Bỏ lưu':'Lưu'} ${escapeText(app.name)}" aria-pressed="${saved.has(app.id)}">${icon('heart')}</button></div></div>`;
 }
-}else{card.innerHTML=`<div class="app-main"><img class="app-icon" src="${escapeText(image)}" alt="" loading="lazy" decoding="async" width="52" height="52"><div><h3>${escapeText(app.name)}${zzNew(app)}</h3><small>${escapeText(app.version?`v${app.version}`:'IPA')} · ${escapeText(app.category||'iOS')}</small></div></div><p>${escapeText(app.description||'Ứng dụng dành cho iOS.')}</p>${app.credit?`<div class="zz-credit"><span>Cre được lấy từ</span><strong>${escapeText(app.credit)}</strong></div>`:''}<div class="app-card-bottom"><button class="app-open">Xem chi tiết ${icon('arrow')}</button><button class="app-save" aria-label="${saved.has(app.id)?'Bỏ lưu':'Lưu'} ${escapeText(app.name)}" aria-pressed="${saved.has(app.id)}">${icon('heart')}</button></div>`;}
+}else{card.innerHTML=`<div class="app-main"><img class="app-icon" src="${escapeText(image)}" alt="" loading="lazy" decoding="async" width="52" height="52"><div><h3>${escapeText(app.name)}${zzNew(app)}</h3><small>${escapeText(app.version?`v${app.version}`:'IPA')} · ${escapeText(app.category||'iOS')}</small></div></div><p>${escapeText(app.description||'Ứng dụng dành cho iOS.')}</p>${app.credit?`<div class="zz-credit"><span>Cre được lấy từ:</span><strong>${escapeText(app.credit)}</strong></div>`:''}<div class="app-card-bottom"><button class="app-open">Xem chi tiết ${icon('arrow')}</button><button class="app-save" aria-label="${saved.has(app.id)?'Bỏ lưu':'Lưu'} ${escapeText(app.name)}" aria-pressed="${saved.has(app.id)}">${icon('heart')}</button></div>`;}
 card.querySelector('img').addEventListener('error',event=>{if(!event.target.dataset.fallback){event.target.dataset.fallback='1';event.target.src='icons/spotify.png';}});
 card.querySelector('.app-save').dataset.appId=app.id;card.querySelector('.app-open').addEventListener('click',()=>openApp(app));card.querySelector('.app-save').addEventListener('click',()=>{const wasSaved=saved.has(app.id);wasSaved?saved.delete(app.id):saved.add(app.id);updateSaved();render();toast(wasSaved?'Đã bỏ lưu ứng dụng':'Đã thêm vào mục Đã lưu');});$('#app-grid').append(card);}
 $('#empty-state').hidden=list.length>0;$('#result-count').textContent=`${list.length} ứng dụng`;$('#result-caption').textContent=savedOnly?'ỨNG DỤNG ĐÃ LƯU':'DANH SÁCH ỨNG DỤNG';
@@ -712,7 +717,7 @@ document.querySelectorAll('[data-category]').forEach(button=>button.addEventList
 $('#favorites-toggle').addEventListener('click',()=>{savedOnly=!savedOnly;render();});$('#mobile-saved').addEventListener('click',()=>{savedOnly=true;activeCategory='all';document.querySelectorAll('[data-category]').forEach(item=>{item.classList.toggle('active',item.dataset.category==='all');item.setAttribute('aria-pressed',String(item.dataset.category==='all'));});$('#search-input').value='';render();$('#library').scrollIntoView({behavior:motionAllowed()?'smooth':'auto'});});
 const guides={install:{title:'Cài IPA lên iPhone',body:'<p>IPA là gói ứng dụng dành cho iOS. Việc tải file về chưa đồng nghĩa ứng dụng đã được cài lên máy.</p><ol><li><strong>Tải đúng file IPA</strong><br>Đọc mô tả và yêu cầu phiên bản iOS trước khi tải.</li><li><strong>Ký và cài ứng dụng</strong><br>Dùng công cụ cài IPA bạn đã thiết lập và phương thức ký phù hợp với tài khoản hoặc chứng chỉ của bạn.</li><li><strong>Mở và kiểm tra</strong><br>Nếu công cụ yêu cầu tin cậy nhà phát triển, làm theo hướng dẫn của công cụ và kiểm tra trong Cài đặt → Cài đặt chung → VPN &amp; Quản lý thiết bị.</li></ol><p class="note">Cách ký và thời hạn sử dụng tùy công cụ, tài khoản và chứng chỉ. Một số cách cài yêu cầu máy tính.</p>'},certificate:{title:'Chứng chỉ là gì?',body:'<p>Ứng dụng iOS thường cần chữ ký hợp lệ để cài và chạy. Chứng chỉ là một phần của quá trình ký đó.</p><ol><li><strong>Không phải lúc nào cũng cần mua</strong><br>Các cách cài bằng tài khoản cá nhân và dịch vụ chứng chỉ có điều kiện sử dụng khác nhau.</li><li><strong>Có thời hạn sử dụng</strong><br>Khi chữ ký hết hiệu lực hoặc bị thu hồi, bạn có thể cần ký và cài lại ứng dụng.</li><li><strong>Kiểm tra trước khi cài</strong><br>Xem công cụ cài IPA hỗ trợ phương thức nào và giữ bản sao dữ liệu quan trọng của bạn.</li></ol><p class="note">Nếu bạn chưa biết mình đang dùng cách cài nào, hãy gửi tên công cụ và ảnh lỗi khi nhắn Telegram để được hướng dẫn đúng trường hợp.</p>'},help:{title:'Khi cần trợ giúp',body:'<ol><li><strong>Không cài được ứng dụng?</strong><br>Kiểm tra phiên bản iOS, dung lượng trống và trạng thái ký ứng dụng trong công cụ bạn đang dùng.</li><li><strong>Ứng dụng mở lên rồi thoát?</strong><br>Kiểm tra yêu cầu tương thích và thử ký lại. Không phải mọi bản IPA đều chạy trên mọi thiết bị.</li><li><strong>Nhắn hỗ trợ thế nào?</strong><br>Gửi tên ứng dụng, phiên bản iOS, tên công cụ cài và ảnh chụp lỗi. Không gửi mật khẩu Apple ID hay mã xác thực.</li></ol><a class="primary-btn" href="https://t.me/zhengzhin" target="_blank" rel="noopener">Nhắn Zhengzhin '+icon('arrow')+'</a>'}};
 const dialog=$('#detail-dialog');let dialogClosing=false;function closeDialog(){if(dialogClosing)return;if(!motionAllowed()||!dialog.animate){dialog.close();return;}dialogClosing=true;const exit=dialog.animate([{opacity:1,transform:'translateY(0) scale(1)'},{opacity:0,transform:'translateY(12px) scale(.985)'}],{duration:160,easing:'ease-in'});exit.finished.catch(()=>{}).finally(()=>{dialog.close();dialogClosing=false;});}dialog.addEventListener('cancel',event=>{event.preventDefault();closeDialog();});function showDialog(label,body){$('#dialog-label').textContent=label;$('#dialog-content').innerHTML=body;dialog.showModal();document.body.style.overflow='hidden';}
-function openApp(app){const link=safeUrl(app.url);showDialog(app.category||'ỨNG DỤNG IOS',`<h2>${escapeText(app.name)}</h2><p>${escapeText(app.description||'Ứng dụng dành cho iOS.')}</p>${app.credit?`<div class="zz-credit"><span>Cre được lấy từ</span><strong>${escapeText(app.credit)}</strong></div>`:''}<p class="note">Phiên bản: ${escapeText(app.version||'Chưa ghi')}<br>${app.date?`Cập nhật: ${escapeText(app.date)}`:''}</p>${link?`<a class="primary-btn" href="${escapeText(link)}" target="_blank" rel="noopener">Tải ứng dụng ${icon('arrow-down')}</a>`:'<p>Liên kết tải chưa được cập nhật.</p>'}`);}
+function openApp(app){const link=safeUrl(app.url);showDialog(app.category||'ỨNG DỤNG IOS',`<h2>${escapeText(app.name)}</h2><p>${escapeText(app.description||'Ứng dụng dành cho iOS.')}</p>${app.credit?`<div class="zz-credit"><span>Cre được lấy từ:</span><strong>${escapeText(app.credit)}</strong></div>`:''}<p class="note">Phiên bản: ${escapeText(app.version||'Chưa ghi')}<br>${app.date?`Cập nhật: ${escapeText(app.date)}`:''}</p>${link?`<a class="primary-btn" href="${escapeText(link)}" target="_blank" rel="noopener">Tải ứng dụng ${icon('arrow-down')}</a>`:'<p>Liên kết tải chưa được cập nhật.</p>'}`);}
 document.querySelectorAll('[data-guide]').forEach(button=>button.addEventListener('click',()=>{const guide=guides[button.dataset.guide];showDialog('GET STARTED / HƯỚNG DẪN',`<h2>${guide.title}</h2>${guide.body}`);}));$('#close-dialog').addEventListener('click',closeDialog);dialog.addEventListener('click',event=>{if(event.target===dialog){const rect=dialog.getBoundingClientRect();if(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom)closeDialog();}});dialog.addEventListener('close',()=>document.body.style.overflow='');
 const menu=$('#menu-panel'),menuButton=$('#menu-toggle');let menuExitTimer;
 function closeMenu(){if(menu.hidden||menuButton.getAttribute('aria-expanded')==='false')return;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Mở menu');clearTimeout(menuExitTimer);if(motionAllowed()){menu.classList.add('menu-leaving');menuExitTimer=setTimeout(()=>{menu.hidden=true;menu.classList.remove('menu-leaving');},170);}else menu.hidden=true;}
