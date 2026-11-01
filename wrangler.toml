@@ -1,9 +1,7 @@
-name = "zhengzhin-smart-ai"
-main = "index.js"
-compatibility_date = "2026-10-01"
-
-[ai]
-binding = "AI"
+name = "zhengzhin-ai"
+main = "worker.js"
+compatibility_date = "2025-01-01"
 
 [vars]
-ALLOWED_ORIGIN = "https://zhengzhin07.github.io"
+ALLOWED_ORIGINS = "https://zhengzhin07.github.io"
+# MODEL = "claude-haiku-5-5"
