@@ -500,9 +500,9 @@ body {overflow-x:clip}
 <div id="music-menu" class="music-menu" hidden>
 <div class="music-menu-title">TRÌNH PHÁT NHẠC</div>
 <label for="music-track">Chọn bài hát</label>
-<select id="music-track"><option value="drill">Sao Mình Chưa Nắm Tay — Drill Remix</option><option value="second">Như Một Người Dưng — Jerk Drill Mix</option><option value="local">Chọn nhạc từ thiết bị…</option></select>
+<select id="music-track"><option value="laviem">LAVIEM — Jerk Drill Remix</option><option value="drill">Sao Mình Chưa Nắm Tay — Drill Remix</option><option value="second">Như Một Người Dưng — Jerk Drill Mix</option><option value="local">Chọn nhạc từ thiết bị…</option></select>
 <input id="music-file" type="file" accept="audio/*" hidden>
-<div id="music-current">Sao Mình Chưa Nắm Tay — Drill Remix</div>
+<div id="music-current">LAVIEM — Jerk Drill Remix</div>
 <div class="music-menu-controls"><button id="music-panel-play" type="button">▶ Phát nhạc</button><label class="music-volume-label">Âm lượng <input id="music-volume" type="range" min="0" max="100" value="55"></label></div>
 <div id="music-status" role="status" aria-live="polite">Nhấn Phát nhạc để bắt đầu</div>
 </div></div><button class="icon-btn" id="motion-toggle" aria-label="Tắt hiệu ứng chuyển động" title="Bật / tắt hiệu ứng"><svg><use href="#i-spark"/></svg></button><button class="icon-btn" id="menu-toggle" aria-controls="menu-panel" aria-label="Mở menu" aria-expanded="false"><svg><use href="#i-menu"/></svg></button></div></header>
@@ -601,6 +601,55 @@ window.ZZ_SITE = {
 </script>
 <script>// Thêm ứng dụng thật vào danh sách này. Không tạo dữ liệu hay liên kết tải giả.
 window.IPA_APPS = [
+  {
+    "id": "thespike-mod",
+    "name": "The Spike Mod",
+    "category": "Games",
+    "version": "Mod",
+    "description": "Mod tất cả nhân vật và trang phục; tùy chỉnh tăng chỉ số nhân vật; mod skin bóng và bản đồ; hiệu ứng không giới hạn; mở khóa kỹ năng AI; góc nhìn camera cao; không có thời gian hồi chiêu.",
+    "icon": "icons/the-spike.webp",
+    "url": "https://mega.nz/file/oBZGkAyL#xC1QM9Wub1UtRnzGgz1y0FCIku4zC5nwSLqfvGELNdg",
+    "filename": "The_Spike_Mod.ipa",
+    "typeLabel": "Game iOS",
+    "date": "2026-11-02"
+  },
+  {
+    "id": "photobook-ipa",
+    "name": "Photobook",
+    "category": "IPA Apps",
+    "version": "IPA",
+    "description": "Tải về để có trải nghiệm tốt hơn.",
+    "icon": "icons/photobook.webp",
+    "url": "https://mega.nz/file/sUIliQpb#kOMHQwWlUA1QfJCT96W5yRdkRrzhK7ZFSutH2ZBvbog",
+    "filename": "Photobook.ipa",
+    "typeLabel": "Ứng dụng ảnh",
+    "date": "2026-11-02",
+    "credit": "Huy Nguyen"
+  },
+  {
+    "id": "instagram-plus",
+    "name": "Instagram Plus",
+    "category": "IPA Apps",
+    "version": "Pro",
+    "description": "Bổ sung các chức năng Pro, nổi bật là xem story, chống thu hồi tin nhắn và nhiều tính năng khác.",
+    "icon": "icons/instagram-plus.webp",
+    "url": "https://mega.nz/file/lR41iSRS#jCbxHYZ12kQ-00dW_7Xc4V9RLe43owBQowj8O25cQHI",
+    "filename": "Instagram_Plus.ipa",
+    "typeLabel": "Mạng xã hội",
+    "date": "2026-11-02"
+  },
+  {
+    "id": "facebook-plus",
+    "name": "Facebook Plus",
+    "category": "IPA Apps",
+    "version": "Plus",
+    "description": "Bổ sung chức năng Plus, nổi bật là xem story ẩn danh cùng nhiều tính năng khác.",
+    "icon": "icons/facebook-plus.webp",
+    "url": "https://mega.nz/file/YE4hRBSS#kO6uEU8zNfnzjTjAW6co96AUZWknUWEErlSXCenF_cQ",
+    "filename": "Facebook_Plus.ipa",
+    "typeLabel": "Mạng xã hội",
+    "date": "2026-11-02"
+  },
   {
     "id": "3105-v2-mediafire",
     "name": "3105",
@@ -749,135 +798,135 @@ window.IPA_APPS = [
     "name": "Claude",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho Claude, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho Claude (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/ai-claude.webp",
     "url": "tools/CLAUDE.txt",
     "filename": "CLAUDE.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
+  },
   {
     "id": "tool-ar-gemini-txt",
     "name": "Ar Gemini",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho Ar Gemini, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho Ar Gemini (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/ai-gemini.webp",
     "url": "tools/Ar-gemini.txt",
     "filename": "Ar-gemini.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
+  },
   {
     "id": "tool-deepseek-vv-txt",
     "name": "DeepSeek VV",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho DeepSeek VV, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho DeepSeek VV (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/ai-deepseek.webp",
     "url": "tools/DeepSeek-VV.txt",
     "filename": "DeepSeek-VV.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
+  },
   {
     "id": "tool-chat-gpt-txt",
     "name": "ChatGPT",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho ChatGPT, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho ChatGPT (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/ai-chatgpt.webp",
     "url": "tools/chat-gpt.txt",
     "filename": "chat-gpt.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
+  },
   {
     "id": "tool-gemini-txt",
     "name": "Gemini",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho Gemini, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho Gemini (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/ai-gemini.webp",
     "url": "tools/gemini.txt",
     "filename": "gemini.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
+  },
   {
     "id": "tool-grok-txt",
     "name": "Grok",
     "category": "Công cụ",
     "version": "TXT",
-    "description": "Tệp văn bản cho Grok, được giới thiệu là prompt bypass dành cho AI cùng tên. Hiệu quả không được xác minh.",
+    "description": "File bypass dành cho Grok (AI). Theo thông tin được cung cấp, file đã được kiểm chứng ổn định trong quá trình sử dụng.",
     "credit": "Ẩn danh",
     "icon": "icons/tool-grok.webp",
     "url": "tools/Grok.txt",
     "filename": "Grok.txt",
     "typeLabel": "Tệp .txt",
     "date": "2026-10-30"
-},
-{
-  "id": "wallpaper-lin-chuxue",
-  "name": "Lin Chuxue",
-  "category": "Hình nền (Tendies)",
-  "version": "Tendies",
-  "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
-  "icon": "wallpapers/Lin_Chuxue.webp",
-  "preview": "wallpapers/Lin_Chuxue.webp",
-  "url": "https://www.mediafire.com/file/f28j6ci5fgso7ig/Lin_Chuxue.tendies/file",
-  "filename": "Lin_Chuxue.tendies",
-  "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30",
-  "credit": "Denrindz"
-},
-{
-  "id": "wallpaper-soy-milk-2",
-  "name": "Soy Milk 2",
-  "category": "Hình nền (Tendies)",
-  "version": "Tendies",
-  "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
-  "icon": "wallpapers/soy_milk_2.webp",
-  "preview": "wallpapers/soy_milk_2.webp",
-  "url": "https://www.mediafire.com/file/tkgryxyi015vxdi/soy_milk_2.tendies/file",
-  "filename": "soy_milk_2.tendies",
-  "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30",
-  "credit": "Denrindz"
-},
-{
-  "id": "wallpaper-black-notgyro",
-  "name": "Black NotGyro",
-  "category": "Hình nền (Tendies)",
-  "version": "Tendies",
-  "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
-  "icon": "wallpapers/Black_NotGyro.webp",
-  "preview": "wallpapers/Black_NotGyro.webp",
-  "url": "https://www.mediafire.com/file/6xdwb157lwb7gag/Black_NotGyro.tendies/file",
-  "filename": "Black_NotGyro.tendies",
-  "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30",
-  "credit": "Denrindz"
-},
-{
-  "id": "wallpaper-blue-sky-couple-with-roses",
-  "name": "Blue Sky Couple with Roses",
-  "category": "Hình nền (Tendies)",
-  "version": "Tendies",
-  "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
-  "icon": "wallpapers/Blue-Sky-Couple-with-Roses.webp",
-  "preview": "wallpapers/Blue-Sky-Couple-with-Roses.webp",
-  "url": "https://www.mediafire.com/file/26xxl2y75qoq4lj/Blue-Sky-Couple-with-Roses.tendies/file",
-  "filename": "Blue-Sky-Couple-with-Roses.tendies",
-  "typeLabel": "Hình nền .tendies",
-  "date": "2026-10-30",
-  "credit": "Denrindz"
-}
+  },
+  {
+    "id": "wallpaper-lin-chuxue",
+    "name": "Lin Chuxue",
+    "category": "Hình nền (Tendies)",
+    "version": "Tendies",
+    "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
+    "icon": "wallpapers/Lin_Chuxue.webp",
+    "preview": "wallpapers/Lin_Chuxue.webp",
+    "url": "https://www.mediafire.com/file/f28j6ci5fgso7ig/Lin_Chuxue.tendies/file",
+    "filename": "Lin_Chuxue.tendies",
+    "typeLabel": "Hình nền .tendies",
+    "date": "2026-10-30",
+    "credit": "Denrindz"
+  },
+  {
+    "id": "wallpaper-soy-milk-2",
+    "name": "Soy Milk 2",
+    "category": "Hình nền (Tendies)",
+    "version": "Tendies",
+    "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
+    "icon": "wallpapers/soy_milk_2.webp",
+    "preview": "wallpapers/soy_milk_2.webp",
+    "url": "https://www.mediafire.com/file/tkgryxyi015vxdi/soy_milk_2.tendies/file",
+    "filename": "soy_milk_2.tendies",
+    "typeLabel": "Hình nền .tendies",
+    "date": "2026-10-30",
+    "credit": "Denrindz"
+  },
+  {
+    "id": "wallpaper-black-notgyro",
+    "name": "Black NotGyro",
+    "category": "Hình nền (Tendies)",
+    "version": "Tendies",
+    "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
+    "icon": "wallpapers/Black_NotGyro.webp",
+    "preview": "wallpapers/Black_NotGyro.webp",
+    "url": "https://www.mediafire.com/file/6xdwb157lwb7gag/Black_NotGyro.tendies/file",
+    "filename": "Black_NotGyro.tendies",
+    "typeLabel": "Hình nền .tendies",
+    "date": "2026-10-30",
+    "credit": "Denrindz"
+  },
+  {
+    "id": "wallpaper-blue-sky-couple-with-roses",
+    "name": "Blue Sky Couple with Roses",
+    "category": "Hình nền (Tendies)",
+    "version": "Tendies",
+    "description": "Bộ hình nền tùy chỉnh màn hình khóa và màn hình chính. Ảnh xem trước được ghép theo đúng bộ.",
+    "icon": "wallpapers/Blue-Sky-Couple-with-Roses.webp",
+    "preview": "wallpapers/Blue-Sky-Couple-with-Roses.webp",
+    "url": "https://www.mediafire.com/file/26xxl2y75qoq4lj/Blue-Sky-Couple-with-Roses.tendies/file",
+    "filename": "Blue-Sky-Couple-with-Roses.tendies",
+    "typeLabel": "Hình nền .tendies",
+    "date": "2026-10-30",
+    "credit": "Denrindz"
+  }
 ];
 </script><script>'use strict';
 const $=s=>document.querySelector(s);
@@ -961,6 +1010,10 @@ function musicSource(index){
  }
  return musicBlobUrls[index];
 }
+const laviemMusic=()=>new URL('music/laviem-jerk-drill-remix.mp3',document.baseURI).href;
+const trackNames={laviem:'LAVIEM — Jerk Drill Remix',drill:'Sao Mình Chưa Nắm Tay — Drill Remix',second:'Như Một Người Dưng — Jerk Drill Mix'};
+const trackSource=key=>key==='laviem'?laviemMusic():key==='second'?secondMusic():builtInMusic();
+const playlist=['laviem','drill','second'];
 const builtInMusic=()=>musicSource(0);
 const secondMusic=()=>musicSource(1);
 audio.preload='none';
@@ -979,7 +1032,7 @@ function syncMusic(){
 function startMusic(){
  musicLoading=true;syncMusic();
  try {
-  if(!audio.getAttribute('src'))audio.src=musicTrack.value==='second'?secondMusic():builtInMusic();
+  if(!audio.getAttribute('src'))audio.src=trackSource(musicTrack.value);
   const p=audio.play();
   if(p&&typeof p.then==='function'){
    p.then(()=>{musicLoading=false;musicStatus.textContent='Đang phát nhạc';syncMusic();})
@@ -995,14 +1048,14 @@ musicChoose.addEventListener('click',()=>{musicMenu.hidden=!musicMenu.hidden;mus
 document.addEventListener('click',e=>{if(!e.target.closest('.music-widget')){musicMenu.hidden=true;musicChoose.setAttribute('aria-expanded','false');}});
 musicTrack.addEventListener('change',()=>{
  if(musicTrack.value==='local'){musicFile.click();return;}
- audio.pause();audio.src=musicTrack.value==='second'?secondMusic():builtInMusic();audio.load();
- musicCurrent.textContent=musicTrack.value==='second'?'Như Một Người Dưng — Jerk Drill Mix':'Sao Mình Chưa Nắm Tay — Drill Remix';
+ audio.pause();audio.src=trackSource(musicTrack.value);audio.load();
+ musicCurrent.textContent=trackNames[musicTrack.value];
  musicStatus.textContent='Đang chuyển bài…';
  startMusic();
 });
 musicFile.addEventListener('change',()=>{
  const f=musicFile.files&&musicFile.files[0];
- if(!f){musicTrack.value=audio.src.startsWith('blob:')?'local':(audio.src===musicBlobUrls[1]?'second':'drill');return;}
+ if(!f){musicTrack.value='laviem';return;}
  if(localMusicURL)URL.revokeObjectURL(localMusicURL);
  localMusicURL=URL.createObjectURL(f);
  audio.pause();audio.src=localMusicURL;audio.load();
@@ -1013,12 +1066,12 @@ musicFile.addEventListener('change',()=>{
 musicVolume.addEventListener('input',()=>{audio.volume=Number(musicVolume.value)/100;});
 audio.addEventListener('playing',()=>{musicLoading=false;musicStatus.textContent='Đang phát nhạc';syncMusic();});
 audio.addEventListener('pause',()=>{musicLoading=false;musicStatus.textContent='Đã tạm dừng';syncMusic();});
-// Hết bài thì tự chuyển bài kế tiếp (bài gốc 1 ↔ bài gốc 2, nhạc chọn từ máy hết thì quay về bài gốc 1).
+// Phát liên tục: LAVIEM -> Sao Mình Chưa Nắm Tay -> Như Một Người Dưng -> LAVIEM.
 audio.addEventListener('ended',()=>{
- const next=musicTrack.value==='drill'?'second':'drill';
+ const next=playlist[(playlist.indexOf(musicTrack.value)+1)%playlist.length];
  musicTrack.value=next;
- audio.src=next==='second'?secondMusic():builtInMusic();audio.load();
- musicCurrent.textContent=next==='second'?'Như Một Người Dưng — Jerk Drill Mix':'Sao Mình Chưa Nắm Tay — Drill Remix';
+ audio.src=trackSource(next);audio.load();
+ musicCurrent.textContent=trackNames[next];
  musicStatus.textContent='Tự động chuyển bài…';
  startMusic();
 });
